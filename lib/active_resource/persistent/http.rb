@@ -4,7 +4,7 @@ module ActiveResource
   module Persistent
     class HTTP < Net::HTTP::Persistent
       def initialize(site, proxy)
-        super('active_resource', proxy)
+        super(name: 'active_resource', proxy: proxy)
         @site = site
       end
 
